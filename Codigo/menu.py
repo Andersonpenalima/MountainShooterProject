@@ -5,7 +5,7 @@ from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from Codigo.constant import WIN_WIDTH, COLOR_OY, COLOR_OY, MENU_OPTION, COLOR_W, COLOR_Y
+from Codigo.constant import WIN_WIDTH, COLOR_OY, MENU_OPTION, COLOR_W, COLOR_Y
 
 
 class Menu:

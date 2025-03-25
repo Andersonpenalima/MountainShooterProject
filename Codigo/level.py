@@ -9,8 +9,11 @@ from pygame.rect import Rect
 from pygame.surface import Surface
 
 from Codigo.constant import COLOR_W, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME
+from Codigo.enemy import Enemy
 from Codigo.entity import Entity
 from Codigo.entityFactory import EntityFactory
+from Codigo.entityMediator import EntityMediator
+from Codigo.player import Player
 
 
 class Level:
@@ -36,6 +39,10 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                if isinstance(ent, (Player, Enemy)):
+                    shoot = ent.shoot()
+                    if shoot is not None:
+                        self.entity_list.append(shoot)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -48,6 +55,9 @@ class Level:
             self.level_text(14, f'fps: {clock.get_fps() :.0f}', COLOR_W, (10, WIN_HEIGHT - 35))
             self.level_text(14, f'entidades: {len(self.entity_list)}', COLOR_W, (10, WIN_HEIGHT - 20))
             pygame.display.flip()
+            # Colisões e Vida
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
         pass
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
