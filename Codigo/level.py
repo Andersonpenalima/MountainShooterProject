@@ -8,7 +8,7 @@ from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from Codigo.constant import COLOR_W, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME
+from Codigo.constant import COLOR_W, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, COLOR_G, COLOR_CY
 from Codigo.enemy import Enemy
 from Codigo.entity import Entity
 from Codigo.entityFactory import EntityFactory
@@ -43,6 +43,10 @@ class Level:
                     shoot = ent.shoot()
                     if shoot is not None:
                         self.entity_list.append(shoot)
+                if ent.name == 'Player1':
+                    self.level_text(14, f'Player1 - HP: {ent.health} | Score: {ent.score}', COLOR_G, (10, 25))
+                if ent.name == 'Player2':
+                    self.level_text(14, f'Player2 - HP: {ent.health} | Score: {ent.score}', COLOR_CY, (10, 45))
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
