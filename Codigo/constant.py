@@ -9,6 +9,8 @@ COLOR_CY = (0, 128, 128)
 
 # Entity
 EVENT_ENEMY = pygame.USEREVENT + 1
+EVENT_TIMEOUT = pygame.USEREVENT + 2
+
 ENTITY_SPEED = {
     'Level1Bg0': 0,
     'Level1Bg1': 1,
@@ -17,10 +19,15 @@ ENTITY_SPEED = {
     'Level1Bg4': 4,
     'Level1Bg5': 4,
     'Level1Bg6': 6,
+    'Level2Bg0': 0,
+    'Level2Bg1': 1,
+    'Level2Bg2': 2,
+    'Level2Bg3': 3,
+    'Level2Bg4': 4,
     'Player1': 4,
-    'Player1Shot': 2,
+    'Player1Shot': 3,
     'Player2': 4,
-    'Player2Shot': 4,
+    'Player2Shot': 5,
     'Enemy1': 1,
     'Enemy1Shot': 3,
     'Enemy2': 1,
@@ -64,9 +71,9 @@ ENTITY_DAMAGE = {
     'Level2Bg3': 0,
     'Level2Bg4': 0,
     'Player1': 1,
-    'Player1Shot': 50,
+    'Player1Shot': 60,
     'Player2': 1,
-    'Player2Shot': 20,
+    'Player2Shot': 25,
     'Enemy1': 1,
     'Enemy1Shot': 30,
     'Enemy2': 1,
@@ -98,12 +105,17 @@ ENTITY_SCORE = {
 
 ENTITY_SHOT_DELAY = {
     'Player1' : 20,
-    'Player2': 20,
+    'Player2': 10,
     'Enemy1': 100,
     'Enemy2': 100,
 }
 # Spawn_Enemy
 SPAWN_TIME = 1000
+
+# Tempo de jogo
+TIMEOUT_LEVEL = 30000
+TIMEOUT_STEP = 100
+
 
 # Menu
 MENU_OPTION = ('NEW GAME 1P',
