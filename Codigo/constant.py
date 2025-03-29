@@ -24,6 +24,11 @@ ENTITY_SPEED = {
     'Level2Bg2': 2,
     'Level2Bg3': 3,
     'Level2Bg4': 4,
+    'Level3Bg0': 0,
+    'Level3Bg1': 1,
+    'Level3Bg2': 2,
+    'Level3Bg3': 3,
+    'Level3Bg4': 4,
     'Player1': 4,
     'Player1Shot': 3,
     'Player2': 4,
@@ -47,6 +52,11 @@ ENTITY_HEALTH = {
     'Level2Bg2': 999,
     'Level2Bg3': 999,
     'Level2Bg4': 999,
+    'Level3Bg0': 999,
+    'Level3Bg1': 999,
+    'Level3Bg2': 999,
+    'Level3Bg3': 999,
+    'Level3Bg4': 999,
     'Player1': 300,
     'Player1Shot': 1,
     'Player2': 300,
@@ -70,6 +80,11 @@ ENTITY_DAMAGE = {
     'Level2Bg2': 0,
     'Level2Bg3': 0,
     'Level2Bg4': 0,
+    'Level3Bg0': 0,
+    'Level3Bg1': 0,
+    'Level3Bg2': 0,
+    'Level3Bg3': 0,
+    'Level3Bg4': 0,
     'Player1': 1,
     'Player1Shot': 60,
     'Player2': 1,
@@ -81,7 +96,7 @@ ENTITY_DAMAGE = {
 }
 
 ENTITY_SCORE = {
-'Level1Bg0': 0,
+    'Level1Bg0': 0,
     'Level1Bg1': 0,
     'Level1Bg2': 0,
     'Level1Bg3': 0,
@@ -93,6 +108,11 @@ ENTITY_SCORE = {
     'Level2Bg2': 0,
     'Level2Bg3': 0,
     'Level2Bg4': 0,
+    'Level3Bg0': 0,
+    'Level3Bg1': 0,
+    'Level3Bg2': 0,
+    'Level3Bg3': 0,
+    'Level3Bg4': 0,
     'Player1': 0,
     'Player1Shot': 0,
     'Player2': 0,
@@ -104,16 +124,16 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player1' : 10,
-    'Player2': 5,
-    'Enemy1': 100,
-    'Enemy2': 100,
+    'Player1' : 20,
+    'Player2': 10,
+    'Enemy1': 80,
+    'Enemy2': 80,
 }
 # Spawn_Enemy
 SPAWN_TIME = 1000
 
 # Tempo de jogo
-TIMEOUT_LEVEL = 30000
+TIMEOUT_LEVEL = 10000
 TIMEOUT_STEP = 100
 
 
