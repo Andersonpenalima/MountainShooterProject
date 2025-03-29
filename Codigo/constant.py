@@ -33,10 +33,12 @@ ENTITY_SPEED = {
     'Player1Shot': 3,
     'Player2': 4,
     'Player2Shot': 5,
-    'Enemy1': 1,
-    'Enemy1Shot': 3,
-    'Enemy2': 1,
-    'Enemy2Shot': 3,
+    'Enemy1': 2,
+    'Enemy1Shot': 4,
+    'Enemy2': 3,
+    'Enemy2Shot': 6,
+    'Enemy3': 1,
+    'Enemy3Shot': 7,
 }
 
 ENTITY_HEALTH = {
@@ -57,14 +59,16 @@ ENTITY_HEALTH = {
     'Level3Bg2': 999,
     'Level3Bg3': 999,
     'Level3Bg4': 999,
-    'Player1': 300,
+    'Player1': 500,
     'Player1Shot': 1,
-    'Player2': 300,
+    'Player2': 500,
     'Player2Shot': 1,
     'Enemy1': 60,
     'Enemy1Shot': 1,
     'Enemy2': 50,
     'Enemy2Shot': 1,
+    'Enemy3': 100,
+    'Enemy3Shot': 1,
 }
 
 ENTITY_DAMAGE = {
@@ -93,6 +97,8 @@ ENTITY_DAMAGE = {
     'Enemy1Shot': 30,
     'Enemy2': 1,
     'Enemy2Shot': 20,
+    'Enemy3': 1,
+    'Enemy3Shot': 50,
 }
 
 ENTITY_SCORE = {
@@ -121,6 +127,8 @@ ENTITY_SCORE = {
     'Enemy1Shot': 0,
     'Enemy2': 10,
     'Enemy2Shot': 0,
+    'Enemy3': 50,
+    'Enemy3Shot': 0,
 }
 
 ENTITY_SHOT_DELAY = {
@@ -128,12 +136,13 @@ ENTITY_SHOT_DELAY = {
     'Player2': 10,
     'Enemy1': 80,
     'Enemy2': 80,
+    'Enemy3': 60,
 }
 # Spawn_Enemy
-SPAWN_TIME = 1000
+SPAWN_TIME = 1500
 
 # Tempo de jogo
-TIMEOUT_LEVEL = 10000
+TIMEOUT_LEVEL = 30000
 TIMEOUT_STEP = 100
 
 
